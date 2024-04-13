@@ -88,9 +88,10 @@ a{text-decoration: none;}
     /* text animtions ends */
 
  /* button styles stats */
- button {
+ .btn {
       padding: 0.8em 1.8em;
       border: 2px solid #f1f1f1;
+      border-radius:0;
       position: relative;
       overflow: hidden;
       background-color: transparent;
@@ -103,7 +104,7 @@ a{text-decoration: none;}
       color: #f1f1f1;
      }
      
-     button::before {
+     .btn::before {
       content: '';
       width: 0;
       height: 300%;
@@ -117,13 +118,52 @@ a{text-decoration: none;}
       z-index: -1;
      }
      
-     button:hover::before {
+     .btn:hover::before {
       width: 105%;
      }
      
-     button:hover {
+     .btn:hover {
       color: #111;
      }
+     /* 2nd button starts */
+     .btn1 {
+      font-size: 13px;
+      color: #e1e1e1;
+      font-weight: 400;
+      cursor: pointer;
+      position: relative;
+      border: none;
+      background: none;
+      transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+      transition-duration: 400ms;
+      transition-property: color;
+    }
+    
+    .btn1:focus,
+    .btn1:hover {
+      color: #fff;
+    }
+    
+    .btn1:focus:after,
+    .btn1:hover:after {
+      width: 100%;
+      left: 0%;
+    }
+    
+    .btn1:after {
+      content: "";
+      pointer-events: none;
+      bottom: -2px;
+      left: 50%;
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background-color: #fff;
+      transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+      transition-duration: 400ms;
+      transition-property: width, left;
+    }
+     /* 2nd buttons ends */
 /* button styles ends */
 
  /* custom scroll bar  starts*/
@@ -163,6 +203,14 @@ a{text-decoration: none;}
   font-weight: 400;
 }
 /* card starts */
+.card-title{
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+.card-body{
+  height:80px;
+}
 .wrapper{
 background-color: #222222;
 }
@@ -188,15 +236,14 @@ background-color: #222222;
 padding: 30px;
 position: relative;
 display: block;
-background: #fff;
-color: #000;
-box-shadow: ☐ rgba(0,0,0,0.35) 0 5px 15px;
+border: #f1f1f1 1px solid;
+border-radius: 10px;
 margin: 40px 0;
+
 }
-.box-area h5{
-  font-size: 16px;
-  font-weight: 700;
-  color: #0a69ed;
+.box-area h6{
+  font-size: 14px;
+  font-weight: 500;
   margin-top: 30px;
   margin-bottom: 5px;
   text-transform: uppercase;
@@ -210,8 +257,8 @@ margin: 0 0 10px;
 font-weight: 400;
 }
 .box-area .img-area{
-width: 90px;
-height: 90px;
+width: 60px;
+height: 60px;
 position: absolute;
 top: -40px;
 Left: 0;
@@ -230,10 +277,14 @@ box-shadow: 0 5px 4px rgba(0,0,0,0.5);
 }
 .socials{
   margin-top:30px;
+  cursor: pointer;
 }
 .socials i{
   margin: 0 10px;
   font-size:18px;
+}
+.socials :hover{
+  color:#FFE400;
 }
 #testimonial_area .owl-nav{
   position:absolute;
@@ -244,10 +295,10 @@ box-shadow: 0 5px 4px rgba(0,0,0,0.5);
   width: 40px;
   height:40px;
   line-height: 40px;
-  color: #0a69ed;
+  color: #222222;
 border-radius: 50%;
 text-align: center;
-background: #fff;
+background:#f1f1f1;
 position: absolute;
 }
 #testimonial_area .owl-prev{
