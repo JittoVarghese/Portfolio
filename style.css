@@ -406,7 +406,7 @@ position: absolute;
       display: none;
       }
   }
-    @media only screen and (max-width: 767px) {
+    @media screen and (max-width: 767px) {
     .owl-nav{
     display: none;
     .box-area{
