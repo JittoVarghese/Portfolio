@@ -16,7 +16,7 @@ a{
   text-decoration: none;
   color:#f1f1f1;
 }
-.headernav{
+.headernav{  
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -198,7 +198,6 @@ a{
   font-size: 70px;
   font-weight: 800;
   letter-spacing: 4px;
-
 }
 .content{
   font-family:'Instrument Sans' ;
@@ -211,6 +210,7 @@ a{
 .about-content{
   font-family:'Instrument Sans' ;
   font-size: 16px;
+  line-height: 25px;
 }
 /* card starts */
 .card-title{
@@ -294,6 +294,7 @@ box-shadow: 0 5px 4px rgba(0,0,0,0.5);
   margin: 0 10px;
   font-size:18px;
 }
+
 .socials :hover{
   color:#FFE400;
 }
@@ -321,61 +322,125 @@ position: absolute;
   top:-30px;
 }
 /* testmonial ends */
-.grid-wrapper{
-  display: grid;
-  grid-template-columns:1fr 1fr 1fr 1fr fr;
-  grid-template-rows:1fr 1fr ;
-  grid-template-areas: "item1 item1 item1 item2 item2"
-                        "item3 item3 item4 item4 item4" ;
-  height: 400px;
-  grid-gap: 10px;
-}
-.item1{
-  background:url("./assets/laptop.jpg") no-repeat center;
-  background-size: cover;
-  /* grid-area: 1/1/2/4; */
-  grid-area: item1;
-  border-radius: 10px;
-}
-.item2{
-  background:url("./assets/laptop.jpg")no-repeat center;
-  background-size: cover;
-  grid-area: item2;
-  border-radius: 10px;
-}
-.item3{
-  background:url("./assets/laptop.jpg") no-repeat center;
-  background-size: cover;
-  grid-area: item3;
-  border-radius: 10px;
-  
-}
-.item4{
-  background:url("./assets/laptop.jpg") no-repeat center;
-  background-size: cover;
-  grid-area: item4;
-  border-radius: 10px;
 
+.gwrapper{
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-gap: 10px;
+  height: 300px;
 }
 
 .item {
   position: relative;
   overflow: hidden;
+  background-color: #FFE400;
+  border-radius: 10px;
 }
  .item .item-content{
-  font-family:'Instrument Sans' ;
+  font-family:'Instrument Sans';
   position: absolute;
   bottom:-100px;
   left:10px;
   transition: all 0.3s;
+ 
 }
 .item:hover .item-content{
   bottom:10px;
 }
+.number{
+  font-size: 70px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  color: #222222;
+}
 /* form style */
+.inputContainer {
+  position: relative;
+  margin-bottom: 40px;
+}
 
+.customInput {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #f1f1f1;
+  outline: none;
+  transition: border-color 0.3s ease;
+  color: #f1f1f1;
+}
 
+.customInput:focus,
+.customInput:not(:placeholder-shown) {
+  border-color: #f1f1f1;
+}
+
+.inputLabel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  padding: 5px;
+  font-size: 16px;
+  color: #f1f1f1;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.customInput:focus + .inputLabel,
+.customInput:not(:placeholder-shown) + .inputLabel {
+  transform: translateY(-100%) translateX(-5px) scale(0.8);
+}
+
+.inputUnderline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #f1f1f1;
+}
+.contact-info li{
+  font-size:25px;
+  list-style-type: none;
+  margin-bottom: 10px;
+
+}
 /* form style */
+footer{
+  background-color: #2C3333;
+}
+.footer a {
+  padding:0 8px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #818181;
+ 
+  transition: 0.3s;
+}
+.footer h1{
+  padding: 8px;
+  font-size: 14px;
+  color: #ffff;
+}
+.footer a:hover {
+  color: #f1f1f1;
+}
+ .footer-cap{
+  font-size:14px;
+  padding-left: 40px;
+}
+.footer-icon{
+  color:#f1f1f1;
+  font-size:28px;
+  padding-left: 40px;
+}
+.footer h6{
+  font-size:12px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
  @media screen and (max-height: 450px) {
     .overlay {overflow-y: auto;}
     .overlay a {font-size: 20px}
@@ -416,12 +481,21 @@ position: absolute;
   .about{
     width:330px;
   }
-  .grid-wrapper{
-    grid-template-columns:1fr 1fr;
-    grid-template-rows: repeat(4,1fr);
-    grid-template-areas: "item1 item1"
-                         "item2 item2"
-                         "item3 item3"
-                         "item4 item4";
+  .gwrapper{
+   
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    height: 500px;
+  
   }
+  .footer-icon, .footer-cap{
+    text-align: center;
+    padding-left: 0;
+  }
+  .footer h6{
+    font-size:10px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
 }
