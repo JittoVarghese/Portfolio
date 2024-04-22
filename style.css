@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
     margin:0;
     padding:0;
     box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif,"Instrument Sans", sans-serif;
    
 }
 body{
@@ -13,7 +12,10 @@ body{
   color:#f1f1f1;
   scroll-behavior: smooth;
 }
-a{text-decoration: none;}
+a{
+  text-decoration: none;
+  color:#f1f1f1;
+}
 .headernav{
     display:flex;
     justify-content: space-between;
@@ -198,9 +200,17 @@ a{text-decoration: none;}
   letter-spacing: 4px;
 
 }
+.content{
+  font-family:'Instrument Sans' ;
+}
 .cap{
-  font-size: 22px;
-  font-weight: 400;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.about-content{
+  font-family:'Instrument Sans' ;
+  font-size: 16px;
 }
 /* card starts */
 .card-title{
@@ -219,13 +229,14 @@ background-color: #222222;
 }
 
 .logo:nth-child(2){
- transition-delay:200ms;
+ transition-delay:400ms;
 }
 .logo:nth-child(3){
-  transition-delay:300ms;
+  transition-delay:500ms;
  }
- .logo:hover{
- box-shadow: rgb(232, 232, 232) 0px 50px 100px -20px, rgb(254, 2, 2) 0px 30px 60px -30px;}
+ .logo:nth-child(4){
+  transition-delay:600ms;
+ }
 /* card ends */
 
 .about{
@@ -310,6 +321,106 @@ position: absolute;
   top:-30px;
 }
 /* testmonial ends */
+.grid-wrapper{
+  display: grid;
+  grid-template-columns:1fr 1fr 1fr 1fr fr;
+  grid-template-rows:1fr 1fr ;
+  grid-template-areas: "item1 item1 item1 item2 item2"
+                        "item3 item3 item4 item4 item4" ;
+  height: 400px;
+  grid-gap: 10px;
+}
+.item1{
+  background:url("./assets/laptop.jpg") no-repeat center;
+  background-size: cover;
+  /* grid-area: 1/1/2/4; */
+  grid-area: item1;
+  border-radius: 10px;
+}
+.item2{
+  background:url("./assets/laptop.jpg")no-repeat center;
+  background-size: cover;
+  grid-area: item2;
+  border-radius: 10px;
+}
+.item3{
+  background:url("./assets/laptop.jpg") no-repeat center;
+  background-size: cover;
+  grid-area: item3;
+  border-radius: 10px;
+  
+}
+.item4{
+  background:url("./assets/laptop.jpg") no-repeat center;
+  background-size: cover;
+  grid-area: item4;
+  border-radius: 10px;
+
+}
+
+.item {
+  position: relative;
+  overflow: hidden;
+}
+ .item .item-content{
+  font-family:'Instrument Sans' ;
+  position: absolute;
+  bottom:-100px;
+  left:10px;
+  transition: all 0.3s;
+}
+.item:hover .item-content{
+  bottom:10px;
+}
+/* form style */
+.inputContainer {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.customInput {
+  width: 10%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #007bff;
+  outline: none;
+  transition: border-color 0.3s ease;
+  color: #007bff;
+}
+
+.customInput:focus,
+.customInput:not(:placeholder-shown) {
+  border-color: #0056b3;
+}
+
+.inputLabel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  padding: 5px;
+  font-size: 16px;
+  color: #007bff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.customInput:focus + .inputLabel,
+.customInput:not(:placeholder-shown) + .inputLabel {
+  transform: translateY(-100%) translateX(-5px) scale(0.8);
+}
+
+.inputUnderline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #007bff;
+}
+
+/* form style */
  @media screen and (max-height: 450px) {
     .overlay {overflow-y: auto;}
     .overlay a {font-size: 20px}
@@ -319,12 +430,10 @@ position: absolute;
     right: 35px;
     }
   }
-  @media screen and (max-width:1024px){
-
+  @media screen and (max-width:1180px){
     .hero{
         height:400px;
     }
-  
     .first {
          font-size:35px;
     }
@@ -336,7 +445,7 @@ position: absolute;
         font-size: 18px;
     }
     .about{
-      width:330px;
+      width:480px;
     }
     .owl-nav{
       display: none;
@@ -348,5 +457,16 @@ position: absolute;
     .box-area{
     text-align: center;
     }
+  }
+  .about{
+    width:330px;
+  }
+  .grid-wrapper{
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: repeat(4,170px);
+    grid-template-areas: "item1 item1"
+                         "item2 item2"
+                         "item3 item3"
+                         "item4 item4";
   }
 }

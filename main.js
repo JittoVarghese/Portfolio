@@ -31,7 +31,7 @@ function openNav() {
 
 // Testimonial carousel starts
 $(".testimonial_slider_area").owlCarousel({
-  autoplay:true,
+  // autoplay:true,
   slideSpeed:3000,
   items:3,
   nav:true,
@@ -54,3 +54,9 @@ $(".testimonial_slider_area").owlCarousel({
   }
 });
 // Testimonial carousel ends
+var typed = new Typed('#element', {
+  strings: ['Front End Developer ', 'Wordpress Developer','UI Designer'],
+  typeSpeed: 70,
+  loop:true,
+
+});
