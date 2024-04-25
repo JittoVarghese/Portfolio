@@ -182,7 +182,7 @@ a{
  /* custom scroll bar ends */
 
 .hero{
-  background: url(./assets/laptop.jpg);
+  background: url(./assets/main.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -223,7 +223,11 @@ a{
 }
 .wrapper{
 background-color: #222222;
+
 }
+.wrapper:hover{
+  transition: all 0.5s linear;
+box-shadow: rgb(255, 255, 255) 0px 5px 15px;}
 .card-img-top{
  padding:5px;
 }
@@ -237,6 +241,7 @@ background-color: #222222;
  .logo:nth-child(4){
   transition-delay:600ms;
  }
+
 /* card ends */
 
 .about{
@@ -327,14 +332,14 @@ position: absolute;
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto;
-  grid-gap: 10px;
-  height: 300px;
+  grid-gap: 15px;
+  height: 400px;
 }
 
 .item {
   position: relative;
   overflow: hidden;
-  background-color: #FFE400;
+  border:1px solid #f1f1f1;
   border-radius: 10px;
 }
  .item .item-content{
@@ -352,7 +357,8 @@ position: absolute;
   font-size: 70px;
   font-weight: 800;
   letter-spacing: 4px;
-  color: #222222;
+  color: #f1f1f1;
+  padding: 10px;
 }
 /* form style */
 .inputContainer {
@@ -485,7 +491,7 @@ footer{
    
     grid-template-columns: auto;
     grid-template-rows: auto auto auto auto;
-    height: 500px;
+    height: 700px;
   
   }
   .footer-icon, .footer-cap{
