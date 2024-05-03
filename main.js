@@ -59,6 +59,7 @@ var typed = new Typed('#element', {
   typeSpeed: 70,
   loop:true,
 
+
 });
 
  var form = document.getElementById('contact-form').addEventListener('submit',function(event){
