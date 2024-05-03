@@ -506,6 +506,9 @@ footer{
     font-size:10px;
     padding-left: 0;
     padding-right: 0;
+  } 
+ .contact_heading{
+    font-size: 45px;
   }
   
 }
