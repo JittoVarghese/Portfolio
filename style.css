@@ -42,7 +42,8 @@ a{
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #191818;
+    background-color: rgb(0, 0, 0);
+    /* background-color: rgba(0, 0, 0, 0.902); */
     overflow-y: hidden;
     transition: 0.5s;
   }
