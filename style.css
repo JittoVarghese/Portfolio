@@ -24,6 +24,7 @@ a{
   color: #9CFF1E;
 }
 .headernav{  
+  background-color: #191818;
     display:flex;
     justify-content: space-between;
     align-items: center;
